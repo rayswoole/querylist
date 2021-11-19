@@ -7,7 +7,8 @@
         "PHP":">=7.1",
         "ext-dom": "*",
         "ext-json": "*",
-        "topthink/think-helper": "^3.1"
+        "topthink/think-helper": "^3.1",
+      "ext-mbstring": "*"
     },
     "suggest":{
 
@@ -23,6 +24,6 @@
         "psr-4":{
             "QL\\":"src"
         },
-        "classmap":["./src/phpQuery.php"]
+        "files":["./src/phpQuery.php"]
     }
 }

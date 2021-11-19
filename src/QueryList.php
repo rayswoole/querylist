@@ -12,7 +12,7 @@
  */
 
 namespace QL;
-use phpQuery;
+use QL\Query\phpQuery;
 use QL\Dom\Query;
 use think\Collection;
 use Closure;

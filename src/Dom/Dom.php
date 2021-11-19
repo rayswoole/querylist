@@ -7,7 +7,7 @@
 
 namespace QL\Dom;
 
-use phpQueryObject;
+use QL\Query\phpQueryObject;
 
 class Dom
 {

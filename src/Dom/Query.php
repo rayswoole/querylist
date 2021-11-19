@@ -10,8 +10,8 @@ namespace QL\Dom;
 use QL\Services\EncodeService;
 use QL\Services\PluginService;
 use think\Collection;
-use phpQuery;
-use phpQueryObject;
+use QL\Query\phpQuery;
+use QL\Query\phpQueryObject;
 use QL\QueryList;
 use Closure;
 
@@ -19,7 +19,7 @@ class Query
 {
     protected $html;
     /**
-     * @var \phpQueryObject
+     * @var phpQueryObject
      */
     protected $document;
     protected $rules;
@@ -81,7 +81,7 @@ class Query
     /**
      * Searches for all elements that match the specified expression.
      *
-     * @param $selector A string containing a selector expression to match elements against.
+     * @param string $selector containing a selector expression to match elements against.
      * @return Elements
      */
     public function find($selector)
