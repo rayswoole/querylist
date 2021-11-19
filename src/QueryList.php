@@ -49,7 +49,7 @@ class QueryList
     public function __construct()
     {
         $this->query = new Query($this);
-        $this->kernel = (new Kernel($this))->bootstrap();
+        $this->kernel = new Kernel($this);
     }
 
     public function __call($name, $arguments)

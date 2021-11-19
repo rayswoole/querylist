@@ -162,8 +162,7 @@ class Query
     //=================将Kernel代码合并Start===================
     public function html(...$args)
     {
-        $this->setHtml(...$args);
-        return $this;
+        return $this->setHtml(...$args);
     }
 
     public function queryData(Closure $callback = null)
