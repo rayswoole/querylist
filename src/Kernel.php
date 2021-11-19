@@ -10,8 +10,6 @@ namespace QL;
 use QL\Contracts\ServiceProviderContract;
 use QL\Exceptions\ServiceNotFoundException;
 use Closure;
-use QL\Services\EncodeService;
-use QL\Services\PluginService;
 use think\Collection;
 
 class Kernel
@@ -35,24 +33,6 @@ class Kernel
     {
         //注册服务提供者
         $this->registerProviders();
-        $this->bind('html',function (...$args){
-            $this->setHtml(...$args);
-            return $this;
-        });
-
-        $this->bind('queryData',function (Closure $callback = null){
-            return $this->query()->getData($callback)->all();
-        });
-
-        $this->bind('pipe',function (Closure $callback = null){
-            return $callback($this);
-        });
-        $this->bind('encoding',function (string $outputEncoding,string $inputEncoding = null){
-            return EncodeService::convert($this,$outputEncoding,$inputEncoding);
-        });
-        $this->bind('use',function ($plugins,...$opt){
-            return PluginService::install($this,$plugins,...$opt);
-        });
         return $this;
     }
 

@@ -178,12 +178,12 @@ class Query
 
     public function encoding(string $outputEncoding,string $inputEncoding = null)
     {
-        return EncodeService::convert($this,$outputEncoding,$inputEncoding);
+        return EncodeService::convert($this->ql, $outputEncoding, $inputEncoding);
     }
 
     public function use($plugins,...$opt)
     {
-        return PluginService::install($this,$plugins,...$opt);
+        return PluginService::install($this->ql, $plugins, ...$opt);
     }
     //=================将Kernel代码合并End  ===================
 

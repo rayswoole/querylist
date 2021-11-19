@@ -16,7 +16,6 @@ use phpQuery;
 use QL\Dom\Query;
 use think\Collection;
 use Closure;
-use QL\Services\MultiRequestService;
 
 
 /**
@@ -35,11 +34,6 @@ use QL\Services\MultiRequestService;
  * @method Array queryData(Closure $callback = null)
  * @method QueryList setData(Collection $data)
  * @method QueryList encoding(string $outputEncoding,string $inputEncoding = null)
- * @method QueryList get($url,$args = null,$otherArgs = [])
- * @method QueryList post($url,$args = null,$otherArgs = [])
- * @method QueryList postJson($url,$args = null,$otherArgs = [])
- * @method MultiRequestService multiGet($urls)
- * @method MultiRequestService multiPost($urls)
  * @method QueryList use($plugins,...$opt)
  * @method QueryList pipe(Closure $callback = null)
  */
@@ -55,12 +49,15 @@ class QueryList
     public function __construct()
     {
         $this->query = new Query($this);
+        $this->kernel = (new Kernel($this))->bootstrap();
     }
 
     public function __call($name, $arguments)
     {
         if(method_exists($this->query,$name)){
             $result = $this->query->$name(...$arguments);
+        }else{
+            $result = $this->kernel->getService($name)->call($this,...$arguments);
         }
        return $result;
     }

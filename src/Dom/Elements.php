@@ -187,7 +187,7 @@ class Elements
      * Iterating elements
      *
      * @param $callback
-     * @return \Illuminate\Support\Collection|\Tightenco\Collect\Support\Collection
+     * @return Collection
      */
     public function map($callback)
     {
@@ -202,7 +202,7 @@ class Elements
      * Gets the attributes of all the elements
      *
      * @param string $attr HTML attribute name
-     * @return \Illuminate\Support\Collection|\Tightenco\Collect\Support\Collection
+     * @return Collection
      */
     public function attrs($attr)
     {
@@ -214,7 +214,7 @@ class Elements
     /**
      * Gets the text of all the elements
      *
-     * @return \Illuminate\Support\Collection|\Tightenco\Collect\Support\Collection
+     * @return Collection
      */
     public function texts()
     {
@@ -226,7 +226,7 @@ class Elements
     /**
      * Gets the html of all the elements
      *
-     * @return \Illuminate\Support\Collection|\Tightenco\Collect\Support\Collection
+     * @return Collection
      */
     public function htmls()
     {
@@ -238,7 +238,7 @@ class Elements
     /**
      * Gets the htmlOuter of all the elements
      *
-     * @return \Illuminate\Support\Collection|\Tightenco\Collect\Support\Collection
+     * @return Collection
      */
     public function htmlOuters()
     {

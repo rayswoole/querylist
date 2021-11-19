@@ -5,7 +5,7 @@
     "homepage": "http://querylist.cc",
     "require": {
         "PHP":">=7.1",
-        "ext-dom": "*",,
+        "ext-dom": "*",
         "ext-json": "*",
         "topthink/think-helper": "^3.1"
     },
