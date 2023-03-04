@@ -42,7 +42,7 @@ QueryList3 文档:http://v3.querylist.cc
 ## 安装
 通过Composer安装:
 ```
-composer require jaeger/querylist
+composer require rayswoole/querylist
 ```
 
 ## 使用
