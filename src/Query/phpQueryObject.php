@@ -2949,7 +2949,7 @@ class phpQueryObject
         $params = func_get_args();
         array_unshift($params, $this->elements);
         return $this->newInstance(
-            call_user_func_array(array('phpQuery', 'map'), $params)
+            call_user_func_array(array(__NAMESPACE__.'\phpQuery', 'map'), $params)
 //			phpQuery::map($this->elements, $callback)
         );
     }
