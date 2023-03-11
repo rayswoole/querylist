@@ -1,12 +1,13 @@
 # 说明
-- 该仓库fork源为jaeger/querylist v4.2.8 精简而来
-- 去除了Config全局配置、Http Client功能
-- 更换Collection集库为topthink/think-helper
+- 该仓库fork源为jaeger/querylist v4.2.8
+- 去除了Config全局配置、Http Client功能（专注DOM分析）
+- 更换Collection库为topthink/think-helper
 - 将phpQuery单文件合并到该仓库
-- 去除了单元测试代码
-- 版权归原作者所有
+- 去除了单元测试代码，无需单元测试使用源
+- 版权归代码的原作者所有，代码与使用方式与源仓库一致
 
-# 使用
+## 安装
+通过Composer安装:
 > composer require rayswoole/querylist
 
 ## QueryList 文档请参考官方
@@ -26,11 +27,11 @@
 - 拥有专业的问答社区和交流群
 
 通过插件可以轻松实现诸如：
-- 多线程采集
+- ~~多线程采集~~
 - 采集JavaScript动态渲染的页面 (PhantomJS/headless WebKit)
-- 图片本地化
-- 模拟浏览器行为，如：提交Form表单
-- 网络爬虫
+- ~~图片本地化~~
+- ~~模拟浏览器行为，如：提交Form表单~~
+- ~~网络爬虫~~
 - .....
 
 ## 环境要求
