@@ -16,7 +16,7 @@ class EncodeService
     {
         $html = $ql->getHtml();
         $inputEncoding || $inputEncoding = self::detect($html);
-        $html = iconv($inputEncoding,$outputEncoding.'//IGNORE',$html);
+        $html = mb_convert_encoding($html, $outputEncoding, $inputEncoding);
         $ql->setHtml($html);
         return $ql;
     }
